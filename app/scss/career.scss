@@ -1,0 +1,37 @@
+.agreement {
+  color: var(--white-gray);
+  font-weight: 500;
+  font-size: 14px;
+  font-family: 'SF Pro Text', sans-serif;
+  line-height: 17px;
+  letter-spacing: -0.7px;
+}
+
+.career-link {
+  font-size: 16px;
+  font-family: 'SF Pro Display', sans-serif;
+  line-height: 19px;
+  text-decoration: none;
+}
+
+.career-link span {
+  border-bottom: 1px solid var(--dark-gray);
+}
+
+.career-link:hover span {
+  border-color: var(--red);
+}
+
+.career-link:hover path {
+  stroke: var(--red);
+}
+
+@media (max-width: 1200px) {
+  .career-link {
+    font-size: 14px;
+  }
+
+  .career-link svg {
+    width: 5px;
+  }
+}
