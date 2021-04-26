@@ -31,7 +31,7 @@ const buildJs = () => src(['node_modules/jquery/dist/jquery.min.js', 'app/js/jqu
 
 const buildImages = () => src('app/images/**/*')
   .pipe(imagemin())
-  .pipe(dest('build/images'))
+  .pipe(dest('build/images'));
 
 const buildTtf = () => src('app/fonts/*.ttf')
   .pipe(ttf2woff())
@@ -55,4 +55,4 @@ const startWatch = () => {
   watch('app/fonts/*.ttf', buildWoff2);
 };
 
-exports.default = series(cleanDist, parallel(buildHtml, buildCss, buildJs, buildImages, buildTtf, buildWoff, buildWoff2 ), startWatch);
+exports.default = series(cleanDist, parallel(buildHtml, buildCss, buildJs, buildImages, buildTtf, buildWoff, buildWoff2), startWatch);
